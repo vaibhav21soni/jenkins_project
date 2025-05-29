@@ -1,0 +1,28 @@
+{
+  "name": "jenkins_project",
+  "version": "1.0.0",
+  "description": "Simple Node.js app with unit tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "mkdir -p dist && echo 'Build successful' > dist/build.txt"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "./test-results"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "glob": "^11.0.2"
+  }
+}
